@@ -1,8 +1,10 @@
 public class Veiculo {
-    private final double PRECO_ETANOL_LITRO = 2.27;
-    private final double PRECO_GASOLINA_LITRO = 2.90;
+    // Final: Não pode ser alterado
+    // Static: Pertence a classe, não ao objeto
+    private static final double PRECO_ETANOL_LITRO = 2.27;
+    private static final double PRECO_GASOLINA_LITRO = 2.90;
     private final String modelo;
-    private String placa="";
+    private String placa;
     private final double capacidadeTanque;
     private final double kmPorLitroEtanol;
     private final double kmPorLitroGasolina;

@@ -44,7 +44,8 @@ public class Posto {
                             veiculo.getModelo(),
                             veiculo.getPlaca(),
                             litrosAbastecidos,
-                            bomba.getCombustivel().getTipoCombustivel())
+                            bomba.getCombustivel().getTipoCombustivel()
+                    )
             );
         }
         relatorio.append("\nResumo da simulação\n");
@@ -86,9 +87,8 @@ public class Posto {
         sb.append("\tbombaGasolina = ").append(bombaGasolina).append(",\n");
         sb.append("\tbombaEtanol = ").append(bombaEtanol).append(",\n");
         sb.append("\tfilaVeiculos = [\n");
-        for (Veiculo veiculo : filaVeiculos) {
+        for (Veiculo veiculo : filaVeiculos)
             sb.append("\t\t").append(veiculo).append(",\n");
-        }
         sb.append("\t]\n");
         sb.append('}');
         return sb.toString();

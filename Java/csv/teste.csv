@@ -1,0 +1,20 @@
+Resultado da simulação
+-----------------------------------------------------------------------------------------------------
+[15:50:56] Veículo modelo AUDI-A1 Placa: JGE-4583 foi abastecido com 45.00 litros de GASOLINA
+[15:50:56] Veículo modelo CITROEN-C3 Placa: JHM-7491 foi abastecido com 47.00 litros de GASOLINA
+[15:50:56] Veículo modelo FORD-KA Placa: JGF-8573 foi abastecido com 55.00 litros de GASOLINA
+[15:50:56] Veículo modelo FORD-KA Placa: JGM-4773 foi abastecido com 55.00 litros de GASOLINA
+[15:50:56] Veículo modelo AUDI-A1 Placa: JGE-0620 foi abastecido com 45.00 litros de GASOLINA
+[15:50:56] Veículo modelo CITROEN-C3 Placa: JWM-1235 foi abastecido com 47.00 litros de GASOLINA
+[15:50:56] Veículo modelo RENAULT-CLIO Placa: JGE-0611 foi abastecido com 50.00 litros de GASOLINA
+[15:50:56] Veículo modelo AUDI-A4 Placa: JMM-7513 foi abastecido com 65.00 litros de ETANOL
+[15:50:56] Veículo modelo FIAT-UNO Placa: JGG-7389 foi abastecido com 48.00 litros de GASOLINA
+[15:50:56] Veículo modelo RENAULT-CLIO Placa: KRM-6771 foi abastecido com 50.00 litros de GASOLINA
+[15:50:56] Veículo modelo FORD-KA Placa: JGE-9393 foi abastecido com 55.00 litros de GASOLINA
+
+Resumo da simulação
+* Total abastecido na bomba 1 GASOLINA  497.00 litros
+* Total abastecido na bomba 2 ETANOL    65.00 litros
+* Total abastecido            GASOLINA  497.00 litros
+* Total abastecido            ETANOL    65.00 litros
+-----------------------------------------------------------------------------------------------------

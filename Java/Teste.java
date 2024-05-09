@@ -4,13 +4,14 @@ import java.util.Map;
 import java.util.Queue;
 
 public class Teste {
+
     /*
     * 1 - Um posto de gasolina com duas bombas abastecedoras independentes, uma de álcool e outra de gasolina, recebe veículos de diversas naturezas.
     * Os veículos adentram ao posto em fila unica, sendo direcionnados para filas individuais das bombas de abastecimento. Cada veículo po deutilizar um ou mais tipos de
     * combustível
-    * Crie um programa que simule o abastecimento de uma lista de veícuois informados no arquivo fornecdico, realizando o abastecimento apropriado de cada veículo.
+    * Crie um programa que simule o abastecimento de uma lista de veículos informados no arquivo fornecidos, realizando o abastecimento apropriado de cada veículo.
     * Pressupondo que todos os veículos estão com o tanque vazio e os terão completados, e minimizando a razão preco/km rodado ao realizar o direcionamento dos veículos
-    * para as bombas, a saíde de ser produzida na ordem cronológica do seventos no seguinte formato:
+    * para as bombas, a saíde de ser produzida na ordem cronológica dos eventos no seguinte formato:
     *
     * Resultado da simulação
     * ----------------------------------------
@@ -18,34 +19,34 @@ public class Teste {
     * [00:10] Veículo modelo AUDI-A4, placa JGB-1234 foi abastecido com 65 litros de GASOLINA
 
         resumo da simulação
-        * Total abastecido na bomba 1 (GASOLNA) 1417 litros
-        * TOTAL Abastecido na bomba 2 (ETANOL) 115 litros
-        * Total geral abastecido de (GASOLINA) 1516 litros
-        * Total abastecido ETANOL 1125 litros
+        * Total abastecido na bomba 1 GASOLINA 1417 litros
+        * TOTAL Abastecido na bomba 2 ETANOL   115 litros
+        * Total abastecido GASOLINA 1516 litros
+        * Total abastecido ETANOL   1125 litros
         *
         * informações adicionais
         *
-        * O preço do livro da Gasolina é R$ 2,90
-        * O preço do litro do Etanol é   R$ 2,27
+        * O preço do litro da Gasolina é R$ 2,90
+        * O preço do litro do Etanol   é R$ 2,27
         *
-        * velocidade de abastecimento da bomba de gasolina: 10 litros/minutos
-        * velocidade de abastecimento da bomba de álcool:   12 litros/minutos
+        * velocidade de abastecimento da bomba de gasolina: 10 litros/minuto
+        * velocidade de abastecimento da bomba de álcool:   12 litros/minuto
         *
         * DICA:
         * privilegie baixo acoplamento e alta coesão na solução proposta,
-        * minimizanod impactos no caso de alterações nas definicções do problema
+        * minimizando impactos no caso de alterações nas definições do problema
      */
 
     public static void main(String[] args) {
-//        testLeituraModelosCSV();
-//        testLeituraVeiculosCSV();
-//        testLeituraBomba();
-//        testLeituraPosto();
+        // testLeituraModelosCSV();
+        // testLeituraVeiculosCSV();
+        // testLeituraBomba();
+        // testLeituraPosto();
 
         // Caminhos dos arquivos CSV
-        String caminho_modelos = "C:\\Users\\Pichau\\Desktop\\teste-logus\\csv\\modelos.csv";
-        String caminho_veiculos = "C:\\Users\\Pichau\\Desktop\\teste-logus\\csv\\veiculos.csv";
-        String caminho_relatorio = "C:\\Users\\Pichau\\Desktop\\teste-logus\\csv\\teste.csv";
+        String caminho_modelos = "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\teste-tecnico-logus\\Java\\csv\\modelos.csv";
+        String caminho_veiculos = "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\teste-tecnico-logus\\Java\\csv\\veiculos.csv";
+        String caminho_relatorio = "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\teste-tecnico-logus\\Java\\csv\\teste.csv";
 
         // Instanciando bombas de gasolina e etanol do posto
         Bomba bomba_1_gasolina = new Bomba(new Combustivel(TipoCombustivel.GASOLINA), 10);
@@ -73,7 +74,8 @@ public class Teste {
      * atualiza as placas dos veículos no mapa de modelos, cria um mapa de veículos com as placas atualizadas,
      * e finalmente cria e retorna uma fila de veículos usando o mapa de veículos atualizado.
      * <p>
-     * @param caminhoArquivoModelos O caminho do arquivo CSV de modelos.
+     *
+     * @param caminhoArquivoModelos  O caminho do arquivo CSV de modelos.
      * @param caminhoArquivoVeiculos O caminho do arquivo CSV de veículos.
      * @return Uma fila de veículos carregados dos arquivos CSV.
      * @throws IllegalArgumentException Se um modelo ou veículo não for encontrado nos mapas correspondentes.
@@ -89,6 +91,7 @@ public class Teste {
      * <p>
      * Este método lê o arquivo CSV de modelos, cria um mapa de modelos e retorna o mapa.
      * <p>
+     *
      * @param caminhoArquivoModelos O caminho do arquivo CSV de modelos.
      * @return Um mapa de modelos de veículos.
      */
@@ -110,8 +113,9 @@ public class Teste {
      * Este método lê o arquivo CSV de veículos, atualiza as placas dos veículos no mapa de modelos,
      * cria um mapa de veículos com as placas atualizadas e retorna o mapa.
      * <p>
+     *
      * @param caminhoArquivoVeiculos O caminho do arquivo CSV de veículos.
-     * @param mapaModelos O mapa de modelos de veículos.
+     * @param mapaModelos            O mapa de modelos de veículos.
      * @return Um mapa de veículos por placa.
      * @throws IllegalArgumentException Se um modelo não for encontrado no mapa de modelos.
      */
@@ -141,7 +145,7 @@ public class Teste {
      * Este método lê o arquivo CSV de modelos e imprime seu conteúdo no console.
      */
     public static void testLeituraModelosCSV() {
-        String modelos = "C:\\Users\\Pichau\\Desktop\\teste-logus\\csv\\modelos.csv";
+        String modelos = "C:\\Users\\Pichau\\Desktop\\teste-logus\\Java\\csv\\modelos.csv";
         System.out.println("Modelos: ");
         System.out.println(LeitorDeArquivoCSV.lerArquivo(modelos));
     }
@@ -152,7 +156,7 @@ public class Teste {
      * Este método lê o arquivo CSV de veículos e imprime seu conteúdo no console.
      */
     public static void testLeituraVeiculosCSV() {
-        String veiculos = "C:\\Users\\Pichau\\Desktop\\teste-logus\\csv\\veiculos.csv";
+        String veiculos = "C:\\Users\\Pichau\\Desktop\\teste-logus\\Java\\csv\\veiculos.csv";
         System.out.println("Veiculos: ");
         System.out.println(LeitorDeArquivoCSV.lerArquivo(veiculos));
     }
@@ -179,8 +183,8 @@ public class Teste {
      * e imprime as informações do posto no console.
      */
     public static void testLeituraPosto() {
-        String modelos = "C:\\Users\\Pichau\\Desktop\\teste-logus\\csv\\modelos.csv";
-        String veiculos = "C:\\Users\\Pichau\\Desktop\\teste-logus\\csv\\veiculos.csv";
+        String modelos = "C:\\Users\\Pichau\\Desktop\\teste-logus\\Java\\csv\\modelos.csv";
+        String veiculos = "C:\\Users\\Pichau\\Desktop\\teste-logus\\Java\\csv\\veiculos.csv";
         Bomba bomba_1_gasolina = new Bomba(new Combustivel(TipoCombustivel.GASOLINA), 10);
         Bomba bomba_2_etanol = new Bomba(new Combustivel(TipoCombustivel.ETANOL), 12);
         Queue<Veiculo> filaVeiculos = carregarVeiculos(modelos, veiculos);

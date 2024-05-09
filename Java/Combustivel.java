@@ -1,6 +1,8 @@
 public class Combustivel {
-    private final double PRECO_ETANOL_LITRO = 2.27;
-    private final double PRECO_GASOLINA_LITRO = 2.90;
+    // Final: Não pode ser alterado
+    // Static: Pertence a classe, não ao objeto
+    private final static double PRECO_ETANOL_LITRO = 2.27;
+    private final static double PRECO_GASOLINA_LITRO = 2.90;
     private final TipoCombustivel tipoCombustivel;
     private final double precoLitro;
 
@@ -28,5 +30,3 @@ public class Combustivel {
                 '}';
     }
 }
-
-
